@@ -21,8 +21,9 @@
 
         .row {
             margin-top: 10%;
-            width: 80%;
-            height: 50%;
+            width: 60%;
+            min-width: 60% !important;
+            min-height: 50%;
             border-radius: 20px;
             box-shadow:0 5px 10px 0 gray , 0 0 10px gray,0 0 20px gray, 0 0 30px gray;
             background-color: gray;
@@ -32,34 +33,36 @@
             padding:0 10px !important;
             font-size: 1.5rem;
             padding: 5px 0;
+            border: 1.5px solid black;
         }
+
     </style>
 </head>
 <body class="d-flex justify-content-center align-items-center">
 
-    <div style="width: 40%;height: 80%;" class="container-lg bg-dark d-flex flex-column align-items-center">
+    <div style="min-width:40%;height: 80%;" class="bg-dark d-flex flex-column align-items-center">
         <h1 class="text-white mt-5" style="text-shadow: 0 0 5px gray,0 0 10px gray,0 0 20px gray;">Convert Lengths</h1>
         <div class="row bg-light">
             <div class="col-5 justify-content-center align-items-center d-flex">
-                <div style="width: 90%;" class="text-center">
+                <div style="min-width: 90%;" class="text-center">
                     <input id="input" type="number" class="w-100" oninput="result(this.value)"/>
-                    <br />
-                    <div id="unitA">
+                    <br /><br />
+                    <div class="fs-5" id="unitA">
                         CENTIMETER
                     </div>
                 </div>
             </div>
             <div class="col-2 justify-content-center align-items-center flex-column d-flex">
-                <i style="font-size: 3rem;" class="fa-solid fa-equals mt-5"></i><br/>
-                <a class="btn w-100 fs-2 text-center" onclick="change()">
+                <i style="font-size: 2em;" class="fa-solid fa-equals mt-5"></i><br/>
+                <a class="btn fs-2 text-center" onclick="change()">
                     <i class="fa-solid fa-rotate"></i>
                 </a>
             </div>
             <div class="col-5 justify-content-center align-items-center d-flex">
-                <div style="width: 90%;" class="text-center">
+                <div style="min-width: 90%;" class="text-center">
                     <input type="number" class="w-100 bg-white border border-dark" disabled id="display"/>
-                    <br />
-                    <div id="unitB">
+                    <br /><br />
+                    <div class="fs-5" id="unitB" >
                         METER
                     </div>
                 </div>
